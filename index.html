@@ -8,8 +8,50 @@
 </head>
 
 <body>
+
+    <div>
+        <fieldset>
+            <legend>Write any examples below...</legend>
+            <label for="frst" class="my_cls">Label for first field: </label>
+            <input type="text" id="frst" name="frst" class="my_input" placeholder="Input your name here" /> <br>
+            <input type="search" autofocus name="poisk" placeholder="field for searching..." /><br>
+            <div>
+                <span class="my_cls">I set my_cls class here</span><input type="checkbox" class="my_cls pribor" /><br>
+            </div>
+            <input type="number" id="age" name="age" step="1" min="1" max="140" value="10" />
+            <br>
+            <label for="price">Set your price here: </label>
+            <input type="range" id="price" class="my_cls" step="100" min="0" max="1000" />
+            <br>
+            <input type="submit" value="Input submit" />
+            <br>
+            <button type="button" value="Fill Form">Button for you</button><br>
+
+            <input list="phonesList" type="text" size="50" name="model" placeholder="input your model..." />
+            <datalist id="phonesList">
+                <option value="iPhone 6S" label="54000"/>
+                <option value="Lumia 950">35000</option>
+                <option value="Nexus 5X"/>
+            </datalist>
+            <br>
+            <input type="color" /><br>
+        </fieldset>
+    </div>
+
+    <hr class="my_input">
+    <div class="my_block">
+        <label for="bday">Input your favorite date: </label>
+        <input type="date" id="bday" placeholder="09.11.1962">
+
+    </div>
+    <aside style="float:right; width: 200px">
+        <p>Только сейчас элемент aside</p>
+
+    </aside>
+
+    <hr>
     <div id="app">
-        <input type="text" v-on:input="setMessage" />
+        <input type="text" size="30" v-on:input="setMessage" />
         <p>{{message}}</p>
     </div>
 
@@ -32,9 +74,9 @@
         </ol>
     </div>
 
-    <div id="app-5">
-        <p>{{ message }}</p>
-        <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+    <div id="app-6">
+        <p class="my_cls">{{ message }}</p>
+        <input v-model="message">
     </div>
 
 
@@ -44,10 +86,8 @@
 
 
 
-
-
-    <!-- <script src="https://unpkg.com/vue"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <script src="code.js"></script>
 
 </body>
